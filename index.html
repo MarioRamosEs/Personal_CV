@@ -3,651 +3,351 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mario Ramos - CV</title>
+<title>Mario Ramos – CV</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
-  @page {
-    size: A4;
-    margin: 0;
-  }
+@page{size:A4;margin:0}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#1B2E4B;
+  --navy-mid:#243D61;
+  --navy-light:#2E4E7E;
+  --accent:#C9623F;
+  --accent-bg:#FDF0EB;
+  --accent-border:#ECC4B2;
+  --text:#1F1F1F;
+  --text-2:#505050;
+  --text-3:#808080;
+  --bg:#F5F3EF;
+  --white:#FFFFFF;
+  --border:#E2DDD7;
+}
+html,body{width:210mm;height:297mm}
+body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:#fff;color:var(--text);font-size:8.9pt;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact;overflow:hidden}
+a{color:inherit;text-decoration:none}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+.page{width:210mm;height:297mm;margin:0;background:var(--white);display:grid;grid-template-rows:auto 1fr;overflow:hidden}
 
-  html, body {
-    width: 210mm;
-    height: 297mm;
-    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    color: #2d2d2d;
-    background: white;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
+/* ── HEADER ── */
+.header{background:var(--navy);padding:6.5mm 10mm 5.5mm;display:flex;align-items:flex-start;gap:6mm;min-height:42mm}
+.avatar{width:32mm;height:32mm;border-radius:50%;border:0.7mm solid rgba(255,255,255,0.25);background:var(--navy-mid);flex-shrink:0;overflow:hidden}
+.avatar img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 16%}
+.header-body{flex:1}
+.h-name{font-family:'DM Serif Display',Georgia,serif;font-size:23pt;color:#fff;line-height:1.05}
+.h-role{font-size:8.2pt;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:1.4pt;margin-top:1.5mm}
+.h-summary{font-size:8.6pt;color:rgba(255,255,255,0.74);margin-top:2mm;max-width:134mm;line-height:1.36;font-weight:300}
 
-  body {
-    overflow: hidden;
-  }
+/* ── SIDEBAR CONTACT ── */
+.sc-item{display:flex;align-items:flex-start;gap:2.2mm;margin-bottom:2mm;break-inside:avoid;page-break-inside:avoid}
+.sc-icon{flex-shrink:0;margin-top:.2mm;color:var(--accent);opacity:.8;width:3.5mm;height:3.5mm}
+.sc-text{font-size:7.6pt;color:var(--text-2);line-height:1.28;word-break:break-word;overflow-wrap:anywhere}
 
-  .page {
-    width: 210mm;
-    height: 297mm;
-    display: grid;
-    grid-template-columns: 57mm 1fr;
-    grid-template-rows: auto 1fr;
-    overflow: hidden;
-  }
+/* ── BODY ── */
+.body{display:grid;grid-template-columns:61mm 1fr;min-height:0;overflow:hidden}
 
-  /* ===== HEADER ===== */
-  .header {
-    grid-column: 1 / -1;
-    background: #465aa3;
-    display: flex;
-    align-items: flex-start;
-    padding: 5.8mm 8mm 5mm 6mm;
-    gap: 4.2mm;
-    min-height: 41mm;
-  }
+/* ── SIDEBAR ── */
+.sidebar{background:var(--bg);padding:6mm 5mm 5mm;overflow:hidden}
+.sb-block{margin-bottom:5mm;break-inside:avoid;page-break-inside:avoid}
+.sb-title{font-size:7.2pt;font-weight:600;text-transform:uppercase;letter-spacing:1.2pt;color:var(--text-3);margin-bottom:2.5mm}
 
-  .photo-wrapper {
-    flex-shrink: 0;
-    width: 33mm;
-    height: 33mm;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 0.8mm solid rgba(255,255,255,0.5);
-    margin-top: 0;
-    box-shadow: 0 1mm 3mm rgba(0,0,0,0.15);
-  }
+.sg{margin-bottom:2.6mm;break-inside:avoid;page-break-inside:avoid}
+.sg-label{font-size:7.6pt;font-weight:600;color:var(--navy);margin-bottom:1.1mm}
+.tags{display:flex;flex-wrap:wrap;gap:.8mm}
+.tag{font-size:7.3pt;padding:.3mm 1.3mm;border-radius:1mm;background:var(--white);border:0.25mm solid var(--border);color:var(--text-2);line-height:1.2}
+.tag.hi{background:var(--accent-bg);border-color:var(--accent-border);color:#7A3825;font-weight:500}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:5mm;row-gap:1mm}
+.skills-grid .sg{margin-bottom:0}
+.skills-grid .sg-label{font-size:7.8pt;margin-bottom:.7mm}
+.skills-grid .tag{font-size:7.1pt;padding:.2mm 1.2mm}
 
-  .photo-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 15%;
-  }
+.li{margin-bottom:2.4mm;break-inside:avoid;page-break-inside:avoid}
+.lh{display:flex;justify-content:space-between;font-size:7.8pt}
+.ln{font-weight:500}
+.ll{color:var(--text-3);font-size:7.3pt}
 
-  .header-text {
-    flex: 1;
-    color: white;
-    padding-top: 0.4mm;
-  }
+.ci-block{margin-bottom:2.4mm;padding-bottom:0;break-inside:avoid;page-break-inside:avoid}
+.ci-block:last-child{margin:0;padding:0;border:none}
+.cb-badge{display:inline-block;font-size:7pt;font-weight:600;padding:.3mm 1.4mm;border-radius:.8mm;background:var(--navy);color:#fff;margin-bottom:.6mm;letter-spacing:.3pt}
+.cb-name{font-size:7.8pt;font-weight:500;color:var(--text);line-height:1.25}
+.cb-meta{font-size:7.2pt;color:var(--text-3);margin-top:.3mm}
 
-  .header-text h1 {
-    font-size: 22pt;
-    font-weight: 700;
-    letter-spacing: 0.3px;
-    line-height: 1.1;
-    margin-bottom: 0.2mm;
-  }
+/* ── MAIN ── */
+.main{padding:5.6mm 8mm 3.6mm;overflow:hidden}
+.section{margin-bottom:4.2mm}
+.sec-title{font-size:7.4pt;font-weight:600;text-transform:uppercase;letter-spacing:1.3pt;color:var(--accent);margin-bottom:2.2mm;display:inline-block;break-after:avoid;page-break-after:avoid}
 
-  .header-text .subtitle {
-    font-size: 10pt;
-    font-weight: 400;
-    margin-bottom: 1.4mm;
-    opacity: 0.95;
-  }
+.exp{margin-bottom:3mm;padding-bottom:0;position:relative;break-inside:avoid;page-break-inside:avoid}
+.exp:last-child{margin-bottom:0;padding-bottom:0}
 
-  .header-text .header-line {
-    width: 36mm;
-    height: 0.6mm;
-    background: white;
-    margin-bottom: 1.8mm;
-    opacity: 0.6;
-  }
+.exp-row{display:flex;justify-content:space-between;align-items:flex-start;gap:2mm}
+.exp-title{font-size:9.8pt;font-weight:600;color:var(--navy);line-height:1.18}
+.exp-loc{font-size:7.3pt;color:var(--text-3);flex-shrink:0;font-style:italic;margin-top:.4mm;text-align:right}
+.exp-co{font-size:8.4pt;font-weight:500;color:var(--text-2);margin-top:.4mm}
+.exp-meta{display:flex;align-items:center;gap:1.6mm;margin:.7mm 0 1.3mm}
+.exp-date{font-size:7.3pt;color:var(--text-3)}
+.exp-pill{font-size:6.8pt;padding:.35mm 1.2mm;background:var(--accent-bg);color:#7A3825;border-radius:.8mm;font-weight:600}
+.exp-sub{font-size:7.8pt;color:var(--text-3);font-style:italic;margin-bottom:1.2mm}
 
-  .header-text .summary {
-    font-size: 8pt;
-    line-height: 1.36;
-    opacity: 0.92;
-    text-align: justify;
-  }
+ul.bul{list-style:none}
+ul.bul li{font-size:8.3pt;color:var(--text-2);padding-left:3.4mm;position:relative;margin-bottom:.8mm;line-height:1.34;break-inside:avoid;page-break-inside:avoid}
+ul.bul li::before{content:'>';position:absolute;left:0;color:var(--accent);font-size:7.2pt;top:.1mm}
 
-  /* ===== SIDEBAR ===== */
-  .sidebar {
-    padding: 4.5mm 3.5mm 5mm 5mm;
-    font-size: 7.8pt;
-    line-height: 1.4;
-    overflow: hidden;
-    border-right: 0.3mm solid #e8e8e8;
-  }
+.edu{margin-bottom:1.8mm;break-inside:avoid;page-break-inside:avoid}
+.edu-title{font-size:8.8pt;font-weight:600;color:var(--navy)}
+.edu-school{font-size:7.8pt;color:var(--text-3);margin-top:.3mm}
 
-  .contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 2.5mm;
-    margin-bottom: 3mm;
-  }
+@media print{
+  html,body{width:210mm;height:297mm;background:#fff}
+  body{overflow:hidden}
+  .page{width:210mm;height:297mm;box-shadow:none;margin:0}
+  a{color:inherit;text-decoration:none}
+}
 
-  .contact-icon {
-    flex-shrink: 0;
-    width: 4.5mm;
-    height: 4.5mm;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0.2mm;
-  }
-
-  .contact-icon svg {
-    width: 4.2mm;
-    height: 4.2mm;
-    fill: #465aa3;
-  }
-
-  .contact-text {
-    word-break: break-all;
-    color: #333;
-    font-size: 8pt;
-  }
-
-  .sidebar-section-title {
-    font-size: 12pt;
-    font-weight: 700;
-    color: #465aa3;
-    margin-top: 4.5mm;
-    margin-bottom: 2mm;
-    letter-spacing: 0.8px;
-    border-bottom: 0.6mm solid #465aa3;
-    padding-bottom: 1.2mm;
-  }
-
-  .language-item {
-    padding: 1.4mm 0;
-    border-bottom: 0.25mm solid #e6e6e6;
-    margin-bottom: 0;
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  .language-item:last-of-type {
-    border-bottom: none;
-  }
-
-  .language-heading {
-    display: flex;
-    justify-content: space-between;
-    font-size: 8pt;
-    line-height: 1.25;
-  }
-
-  .language-name {
-    font-weight: 500;
-  }
-
-  .language-level {
-    color: #777;
-    font-size: 7.5pt;
-  }
-
-  .other-info-text {
-    font-size: 8pt;
-    margin-bottom: 1mm;
-  }
-
-  .cert-item {
-    margin-bottom: 2.8mm;
-  }
-
-  .cert-name {
-    font-size: 8.2pt;
-    font-weight: 700;
-    line-height: 1.3;
-  }
-
-  .cert-detail {
-    font-size: 7.5pt;
-    color: #777;
-    font-style: italic;
-  }
-
-  /* ===== MAIN CONTENT ===== */
-  .main {
-    padding: 2.4mm 7mm 5mm 5mm;
-    overflow: hidden;
-  }
-
-  .section-title {
-    font-size: 14pt;
-    font-weight: 700;
-    color: #465aa3;
-    letter-spacing: 0.8px;
-    border-bottom: 0.6mm solid #465aa3;
-    padding-bottom: 1.2mm;
-    margin-bottom: 3mm;
-  }
-
-  .job {
-    margin-bottom: 3.5mm;
-  }
-
-  .job-title {
-    font-size: 11pt;
-    font-weight: 700;
-    line-height: 1.25;
-    color: #465aa3;
-  }
-
-  .job-company {
-    font-size: 11.5pt;
-    font-weight: 600;
-    line-height: 1.3;
-  }
-
-  .job-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 2mm;
-    margin-bottom: 0.5mm;
-  }
-
-  .job-period {
-    display: flex;
-    align-items: center;
-    gap: 1.4mm;
-    min-width: 0;
-  }
-
-  .job-date {
-    font-size: 8.2pt;
-    color: #465aa3;
-    font-style: italic;
-  }
-
-  .experience-badge {
-    display: inline-block;
-    font-size: 6.8pt;
-    line-height: 1.2;
-    padding: 0.35mm 1.2mm;
-    border-radius: 0.8mm;
-    background: #e9edff;
-    color: #465aa3;
-    font-weight: 700;
-    white-space: nowrap;
-  }
-
-  .job-location {
-    font-size: 8.2pt;
-    color: #465aa3;
-    font-style: italic;
-  }
-
-  .job-description {
-    font-size: 8.2pt;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 0.5mm;
-    line-height: 1.35;
-  }
-
-  .functions-label {
-    font-size: 8.2pt;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 0.5mm;
-  }
-
-  .job-functions {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  .job-functions li {
-    font-size: 8.2pt;
-    line-height: 1.45;
-    margin-bottom: 1mm;
-    padding-left: 3.5mm;
-    position: relative;
-  }
-
-  .job-functions li::before {
-    content: "▪";
-    position: absolute;
-    left: 0;
-    color: #444;
-    font-size: 6.5pt;
-    top: 0.2mm;
-  }
-
-  /* ===== TECH SKILLS ===== */
-  .skills-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 4mm;
-    row-gap: 2.2mm;
-    margin-bottom: 1mm;
-  }
-
-  .skill-group {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  .skill-cat {
-    font-size: 8.5pt;
-    font-weight: 700;
-    color: #465aa3;
-    margin-bottom: 1mm;
-    line-height: 1.25;
-  }
-
-  .skill-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1mm;
-  }
-
-  .skill-badge {
-    display: inline-block;
-    font-size: 7.4pt;
-    line-height: 1.2;
-    padding: 0.6mm 1.5mm;
-    border-radius: 1mm;
-    background: #f4f6ff;
-    border: 0.25mm solid #d8def8;
-    color: #2d2d2d;
-  }
-
-  .skill-badge.primary {
-    background: #e9edff;
-    border-color: #b7c1ef;
-    color: #465aa3;
-    font-weight: 700;
-  }
-
-  /* ===== EDUCATION ===== */
-  .edu-item {
-    margin-bottom: 2.5mm;
-  }
-
-  .edu-title {
-    font-size: 10.5pt;
-    font-weight: 700;
-    color: #465aa3;
-    line-height: 1.3;
-  }
-
-  .edu-school {
-    font-size: 9.5pt;
-    line-height: 1.3;
-  }
-
-  /* ===== PRINT ===== */
-  @media print {
-    html, body {
-      width: 210mm;
-      height: 297mm;
-    }
-    .page {
-      width: 210mm;
-      height: 297mm;
-    }
-  }
-
-  /* ===== SCREEN PREVIEW ===== */
-  @media screen {
-    html {
-      background: #e0e0e0;
-      display: flex;
-      justify-content: center;
-      padding: 20px 0;
-      width: 100%;
-      height: auto;
-    }
-    body {
-      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
-      margin: 0 auto;
-      height: auto;
-    }
-  }
+@media screen{
+  html{width:100%;height:auto;min-height:100%;background:#e0e0e0;display:flex;justify-content:center;padding:20px 0}
+  body{height:auto;box-shadow:0 2px 20px rgba(0,0,0,.2)}
+}
 </style>
 </head>
 <body>
-
 <div class="page">
+
   <!-- HEADER -->
   <div class="header">
-    <div class="photo-wrapper">
+    <div class="avatar">
       <img src="uploads/Linkedin.jpg" alt="Mario Ramos">
     </div>
-    <div class="header-text">
-      <h1>Mario Ramos</h1>
-      <div class="subtitle">Azure · .NET Core · AI Cloud Architect</div>
-      <div class="header-line"></div>
-      <div class="summary">
-        AI Cloud Architect with 8+ years designing and delivering cloud-native solutions on Microsoft
-        Azure across 30+ enterprise projects. Currently leading end-to-end architecture of agentic AI
-        platforms that combine LLM orchestration, document intelligence, and event-driven microservices
-        to automate complex business processes at scale.
-      </div>
+    <div class="header-body">
+      <div class="h-name">Mario Ramos</div>
+      <div class="h-role">Azure · .NET Core · AI Cloud Architect</div>
+      <p class="h-summary">AI Cloud Architect with 8+ years designing and delivering cloud-native solutions on Microsoft Azure across 30+ enterprise projects. Currently leading end-to-end architecture of agentic AI platforms that combine LLM orchestration, document intelligence, and event-driven microservices to automate complex business processes at scale.</p>
     </div>
   </div>
 
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <!-- Contact -->
-    <div class="contact-item">
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sb-block">
+        <div class="sb-title">Contact</div>
+
+        <a class="sc-item" href="mailto:mario.ramos.montesinos@gmail.com">
+          <svg class="sc-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+          <span class="sc-text">marioramosmontesinos@gmail.com</span>
+        </a>
+        <div class="sc-item">
+          <svg class="sc-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+          <span class="sc-text">+34 678 020 009</span>
+        </div>
+        <div class="sc-item">
+          <svg class="sc-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="sc-text">Barcelona, Spain</span>
+        </div>
+        <a class="sc-item" href="https://www.linkedin.com/in/marioramosmontesinos/">
+          <svg class="sc-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="sc-text">marioramosmontesinos</span>
+        </a>
+        <a class="sc-item" href="https://github.com/MarioRamosEs">
+          <svg class="sc-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          <span class="sc-text">MarioRamosEs</span>
+        </a>
+        <a class="sc-item" href="https://twitter.com/MarioRamosEs">
+          <svg class="sc-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+          <span class="sc-text">@MarioRamosEs</span>
+        </a>
       </div>
-      <div class="contact-text">mario.ramos.montesinos@gmail.com</div>
-    </div>
 
-    <div class="contact-item">
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
-      </div>
-      <div class="contact-text">+34 678 020 009</div>
-    </div>
-
-    <div class="contact-item">
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
-      </div>
-      <div class="contact-text">Barcelona, Spain</div>
-    </div>
-
-    <div class="contact-item">
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-      </div>
-      <div class="contact-text">linkedin.com/in/marioramos<br>montesinos</div>
-    </div>
-
-    <div class="contact-item">
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-      </div>
-      <div class="contact-text">@MarioRamosEs</div>
-    </div>
-
-    <div class="contact-item">
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5A10.003 10.003 0 0022 12 10 10 0 0012 2z"/></svg>
-      </div>
-      <div class="contact-text">github.com/MarioRamosEs</div>
-    </div>
-
-    <!-- Languages -->
-    <div class="sidebar-section-title">LANGUAGES</div>
-    <div class="language-item">
-      <div class="language-heading">
-        <span class="language-name">Spanish</span>
-        <span class="language-level">Native</span>
-      </div>
-    </div>
-    <div class="language-item">
-      <div class="language-heading">
-        <span class="language-name">English</span>
-        <span class="language-level">Professional</span>
-      </div>
-    </div>
-
-    <!-- Certificates -->
-    <div class="sidebar-section-title">CERTIFICATIONS</div>
-
-    <div class="cert-item">
-      <div class="cert-name">AZ-305: Azure Solutions Architect Expert</div>
-      <div class="cert-detail">Microsoft - 2025</div>
-    </div>
-
-    <div class="cert-item">
-      <div class="cert-name">AZ-204: Azure Developer Associate</div>
-      <div class="cert-detail">Microsoft - 2022</div>
-    </div>
-
-    <div class="cert-item">
-      <div class="cert-name">AI-102: Azure AI Engineer Associate</div>
-      <div class="cert-detail">Microsoft - 2024</div>
-    </div>
-
-    <div class="cert-item">
-      <div class="cert-name">AZ-104: Azure Administrator Associate</div>
-      <div class="cert-detail">Microsoft - 2025</div>
-    </div>
-
-    <div class="cert-item">
-      <div class="cert-name">GitHub Copilot</div>
-      <div class="cert-detail">Microsoft - 2025</div>
-    </div>
-
-    <!-- Other Info -->
-    <div class="sidebar-section-title">OTHER INFO</div>
-    <div class="other-info-text">Driving licence: B/A2</div>
-  </div>
-
-  <!-- MAIN CONTENT -->
-  <div class="main">
-    <!-- Work Experience -->
-    <div class="section-title">WORK EXPERIENCE</div>
-
-    <div class="job">
-      <div class="job-title">Azure .NET AI Cloud Architect</div>
-      <div class="job-company">ENCAMINA</div>
-      <div class="job-meta">
-        <span class="job-period">
-          <span class="job-date">Jan 2023 - Present</span>
-          <span class="experience-badge">3+ yrs</span>
-        </span>
-        <span class="job-location">Barcelona (remote)</span>
-      </div>
-      <div class="job-description">Software consultancy specialised in Microsoft technologies</div>
-      <div class="functions-label">Functions</div>
-      <ul class="job-functions">
-        <li>Technical lead for enterprise-grade agentic AI platforms on Azure, with full ownership of solution design, infrastructure architecture, and delivery oversight for cross-functional teams of up to 5 engineers.</li>
-        <li>Defined multi-project Azure AI Foundry strategies: model deployment governance, GDPR-compliant DataZone configurations, and APIM-managed quota distribution across environments.</li>
-        <li>Built conversational chatbots using Azure Bot Service and Azure Container Apps, combining document intelligence pipelines with event-driven microservice architectures.</li>
-        <li>Led Proof of Concept (PoC) initiatives to validate AI's business impact and translate findings into production-ready architecture proposals.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-title">.NET / Angular / Azure - Fullstack Developer</div>
-      <div class="job-company">AXPE Consulting</div>
-      <div class="job-meta">
-        <span class="job-period">
-          <span class="job-date">02/2021 - 06/2023</span>
-          <span class="experience-badge">2.5 yrs</span>
-        </span>
-        <span class="job-location">Barcelona (remote)</span>
-      </div>
-      <div class="functions-label">Functions</div>
-      <ul class="job-functions">
-        <li>Development of the Hipatia platform, a restart from scratch of the VHIR (Vall d'Hebron Research Institute) management platform adaptable to other clinical research centers.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-title">.NET / Vue - FullStack Developer</div>
-      <div class="job-company">AT Infoserveis</div>
-      <div class="job-meta">
-        <span class="job-period">
-          <span class="job-date">Sep 2018 - Dec 2020</span>
-          <span class="experience-badge">2.5 yrs</span>
-        </span>
-        <span class="job-location">Granollers, Barcelona</span>
-      </div>
-      <div class="functions-label">Functions</div>
-      <ul class="job-functions">
-        <li>Developed customised web platforms and ios/android applications for enterprise clients.</li>
-        <li>Built bidirectional integrations with ERP and e-commerce systems including A3ERP, Prestashop, Salesforce, Zoho, and WooCommerce.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-title">STEM Educational Coordinator</div>
-      <div class="job-company">Serendipity Learning Services, SL</div>
-      <div class="job-meta">
-        <span class="job-period">
-          <span class="job-date">Sep 2015 - Jun 2018</span>
-          <span class="experience-badge">3 yrs</span>
-        </span>
-        <span class="job-location">Mataró, Barcelona</span>
-      </div>
-      <div class="functions-label">Functions</div>
-      <ul class="job-functions">
-        <li>Designed and coordinated STEM education programmes spanning web development, robotics, IoT, and game development for young learners.</li>
-      </ul>
-    </div>
-
-    <!-- Tech Skills -->
-    <div class="section-title" style="margin-top: 2mm;">TECH SKILLS</div>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <div class="skill-cat">Backend</div>
-        <div class="skill-badges">
-          <span class="skill-badge primary">ASP.NET Core</span>
-          <span class="skill-badge primary">C#</span>
-          <span class="skill-badge">Entity Framework</span>
-          <span class="skill-badge">LINQ</span>
-          <span class="skill-badge">Design Patterns</span>
-          <span class="skill-badge">Aspire</span>
-          <span class="skill-badge">M365 Agents SDK</span>
+      <div class="sb-block">
+        <div class="sb-title">Languages</div>
+        <div class="li">
+          <div class="lh"><span class="ln">Spanish</span><span class="ll">Native</span></div>
+        </div>
+        <div class="li">
+          <div class="lh"><span class="ln">English</span><span class="ll">Conversational</span></div>
         </div>
       </div>
-      <div class="skill-group">
-        <div class="skill-cat">Generative AI</div>
-        <div class="skill-badges">
-          <span class="skill-badge primary">Azure AI Foundry</span>
-          <span class="skill-badge primary">Agent Framework</span>
-          <span class="skill-badge">Azure AI Search</span>
-          <span class="skill-badge">Content Understanding</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-cat">Cloud - Azure</div>
-        <div class="skill-badges">
-          <span class="skill-badge">App Service</span>
-          <span class="skill-badge">Functions</span>
-          <span class="skill-badge">ACA</span>
-          <span class="skill-badge">AKS</span>
-          <span class="skill-badge">CosmosDB</span>
-          <span class="skill-badge">APIM</span>
-          <span class="skill-badge">Service Bus</span>
-          <span class="skill-badge">Event Grid</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-cat">DevOps</div>
-        <div class="skill-badges">
-          <span class="skill-badge primary">Terraform</span>
-          <span class="skill-badge">Azure Pipelines</span>
-          <span class="skill-badge">GitHub Copilot</span>
-        </div>
-      </div>
-    </div>
 
-    <!-- Education -->
-    <div class="section-title" style="margin-top: 2.5mm;">EDUCATION</div>
-    <div class="edu-item">
-      <div class="edu-title">B.Sc. Computer Engineering</div>
-      <div class="edu-school">Universitat Oberta de Catalunya (UOC)</div>
-    </div>
-    <div class="edu-item">
-      <div class="edu-title">Certificate of Higher Education - Multiplatform App Development</div>
-      <div class="edu-school">Escola Pia Santana</div>
-    </div>
+      <div class="sb-block">
+        <div class="sb-title">Certifications</div>
+
+        <div class="ci-block">
+          <span class="cb-badge">AZ-305</span>
+          <div class="cb-name">Azure Solutions Architect Expert</div>
+          <div class="cb-meta">Microsoft · 2025</div>
+        </div>
+        <div class="ci-block">
+          <span class="cb-badge">AZ-204</span>
+          <div class="cb-name">Azure Developer Associate</div>
+          <div class="cb-meta">Microsoft · 2022</div>
+        </div>
+        <div class="ci-block">
+          <span class="cb-badge">AI-102</span>
+          <div class="cb-name">Azure AI Engineer Associate</div>
+          <div class="cb-meta">Microsoft · 2024</div>
+        </div>
+        <div class="ci-block">
+          <span class="cb-badge">AZ-104</span>
+          <div class="cb-name">Azure Administrator Associate</div>
+          <div class="cb-meta">Microsoft · 2025</div>
+        </div>
+        <div class="ci-block">
+          <span class="cb-badge" style="background:#1b1f23">GH-300</span>
+          <div class="cb-name">GitHub Copilot</div>
+          <div class="cb-meta">Microsoft · 2025</div>
+        </div>
+      </div>
+
+      <div class="sb-block">
+        <div class="sb-title">Other</div>
+        <div style="font-size:11.5px;color:var(--text-3)">Driving licence: B/A2</div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <div class="section">
+        <div class="sec-title">Work Experience</div>
+
+        <div class="exp">
+          <div class="exp-row">
+            <div class="exp-title">Azure .NET AI Cloud Architect</div>
+            <div class="exp-loc">Barcelona (remote)</div>
+          </div>
+          <div class="exp-co">ENCAMINA</div>
+          <div class="exp-meta">
+            <span class="exp-date">Jan 2023 – Present</span>
+            <span class="exp-pill">3+ yrs</span>
+          </div>
+          <div class="exp-sub">Software consultancy specialised in Microsoft technologies</div>
+          <ul class="bul">
+            <li>Technical lead for enterprise-grade agentic AI platforms on Azure, with full ownership of solution design, infrastructure architecture, and delivery oversight for cross-functional teams of up to 5 engineers.</li>
+            <li>Defined multi-project Microsoft Foundry strategies: model deployment governance, GDPR-compliant DataZone configurations, and APIM-managed quota distribution across environments.</li>
+            <li>Built conversational chatbots using Azure Bot Service and Azure Container Apps, combining document intelligence pipelines with event-driven microservice architectures.</li>
+            <li>Led Proof of Concept (PoC) initiatives to validate AI's business impact and translate findings into production-ready architecture proposals.</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <div class="exp-row">
+            <div class="exp-title">.NET / Angular / Azure — Fullstack Developer</div>
+            <div class="exp-loc">Barcelona (remote)</div>
+          </div>
+          <div class="exp-co">AXPE Consulting</div>
+          <div class="exp-meta">
+            <span class="exp-date">Feb 2021 – Jun 2023</span>
+            <span class="exp-pill">2.5 yrs</span>
+          </div>
+          <ul class="bul">
+            <li>Led end-to-end development of Hipatia, a ground-up rebuild of the clinical research management system for VHIR (Vall d'Hebron Research Institute), designed as a multi-tenant platform adaptable to other research centres.</li>
+            <li>Defined Angular frontend architecture and .NET Core backend, deploying the solution on Azure with full CI/CD pipeline coverage.</li>
+            <li>Collaborated with clinical domain stakeholders to translate complex requirements into scalable technical solutions.</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <div class="exp-row">
+            <div class="exp-title">.NET / Vue — Fullstack Developer</div>
+            <div class="exp-loc">Granollers, Barcelona</div>
+          </div>
+          <div class="exp-co">AT Infoserveis</div>
+          <div class="exp-meta">
+            <span class="exp-date">Sep 2018 – Dec 2020</span>
+            <span class="exp-pill">2.5 yrs</span>
+          </div>
+          <ul class="bul">
+            <li>Developed customised web platforms and ios/android applications for enterprise clients.</li>
+            <li>Built bidirectional integrations with ERP and e-commerce systems including A3ERP, Prestashop, Salesforce, Zoho, and WooCommerce.</li>
+          </ul>
+        </div>
+
+        <div class="exp">
+          <div class="exp-row">
+            <div class="exp-title">STEM Educational Coordinator</div>
+            <div class="exp-loc">Mataró, Barcelona</div>
+          </div>
+          <div class="exp-co">Serendipity Learning Services, SL</div>
+          <div class="exp-meta">
+            <span class="exp-date">Sep 2015 – Jun 2018</span>
+            <span class="exp-pill">3 yrs</span>
+          </div>
+          <ul class="bul">
+            <li>Designed and coordinated STEM education programmes spanning web development, robotics, IoT, and game development for young learners.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sec-title">Technical Skills</div>
+        <div class="skills-grid">
+          <div class="sg">
+            <div class="sg-label">Backend</div>
+            <div class="tags">
+              <span class="tag hi">ASP.NET Core</span>
+              <span class="tag hi">C#</span>
+              <span class="tag">Entity Framework</span>
+              <span class="tag">LINQ</span>
+              <span class="tag">Design Patterns</span>
+              <span class="tag">Aspire</span>
+              <span class="tag">M365 Agents SDK</span>
+            </div>
+          </div>
+
+          <div class="sg">
+            <div class="sg-label">Generative AI</div>
+            <div class="tags">
+              <span class="tag hi">Microsoft Foundry</span>
+              <span class="tag hi">Microsoft Agent Framework</span>
+              <span class="tag">Azure AI Search</span>
+              <span class="tag">Content Understanding</span>
+              <span class="tag">LLM Orchestration</span>
+              <span class="tag">RAG</span>
+            </div>
+          </div>
+
+          <div class="sg">
+            <div class="sg-label">Cloud - Azure</div>
+            <div class="tags">
+              <span class="tag">App Service</span>
+              <span class="tag">Functions</span>
+              <span class="tag">ACA</span>
+              <span class="tag">AKS</span>
+              <span class="tag">CosmosDB</span>
+              <span class="tag">APIM</span>
+              <span class="tag">Service Bus</span>
+              <span class="tag">Event Grid</span>
+            </div>
+          </div>
+
+          <div class="sg">
+            <div class="sg-label">DevOps</div>
+            <div class="tags">
+              <span class="tag hi">Terraform</span>
+              <span class="tag">Azure Pipelines</span>
+              <span class="tag">GitHub Copilot</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sec-title">Education</div>
+
+        <div class="edu">
+          <div class="edu-title">B.Sc. Computer Engineering</div>
+          <div class="edu-school">Universitat Oberta de Catalunya (UOC)</div>
+        </div>
+        <div class="edu">
+          <div class="edu-title">Certificate of Higher Education - Multiplatform App Development</div>
+          <div class="edu-school">Escola Pia Santana</div>
+        </div>
+      </div>
+
+    </main>
   </div>
 </div>
-
 </body>
 </html>
