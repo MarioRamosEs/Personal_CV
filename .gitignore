@@ -1,2 +1,9 @@
 .preview-server.pid
 /screenshots
+
+# APM dependencies
+apm_modules/
+apm.lock.yaml
+.codex
+.codex-build
+.claude

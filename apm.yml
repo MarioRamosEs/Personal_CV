@@ -1,0 +1,25 @@
+name: Personal-Professional-CV
+version: 1.0.0
+description: Personal-Professional-CV project dependencies and MCP configurations.
+
+# Pin the harnesses used by this repository so generated files are deterministic.
+targets:
+  - copilot
+  - claude
+  - codex
+
+dependencies:
+  apm:
+    - github/awesome-copilot/skills/microsoft-agent-framework
+    - github/awesome-copilot/skills/cloud-design-patterns
+    - github/awesome-copilot/skills/microsoft-docs
+    - github/awesome-copilot/skills/microsoft-code-reference
+
+  mcp:
+    - name: microsoft-learn
+      registry: false
+      transport: http
+      url: https://learn.microsoft.com/api/mcp
+
+includes: auto
+scripts: {}
